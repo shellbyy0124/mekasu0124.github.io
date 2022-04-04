@@ -8,23 +8,18 @@ app.component('title-details', {
             </div>
 
             <div class="title">
-                <h1>{{ title }}</h1>
-                <h3>{{ subTitle }}</h3>
+                <h1>{{ subTitle }}</h1>
             </div>
         </div>
     </div>`,
     data() {
         return {
-            title: 'Gawth3r Platform',
             subTitle: 'A Place For Everyone; By The People => For The People',
             image: './assets/images/gawth3r_one.jpg'
         }
     },
     methods: {},
     computed: {
-        title() {
-            return this.title
-        },
         subTitle() {
             return this.subTitle
         },

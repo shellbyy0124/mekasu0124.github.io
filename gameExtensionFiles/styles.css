@@ -1,0 +1,56 @@
+html {
+    background-color: black;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: silver;
+    width: 900px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.nav-bar a {
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 16px;
+    width: 150px;
+}
+
+.game-container h1 {
+    color: silver;
+    font-size: 70px;
+    text-align: center;
+}
+
+.game-container h3 {
+    color: silver;
+    font-size: 30px;
+    text-align: center;
+}
+
+.box-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: silver;
+    padding: 16px;
+    font-size: 20px;
+}
+
+.box-2 a {
+    color: silver;
+    font-size: 20px;
+}
