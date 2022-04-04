@@ -5,15 +5,15 @@ app.component('rule-details',{
         <div class="rule-container">
             <h3>Rules For The Website Extension</h3>
             <h5>These rules are subject to change at any time. In this event, Gawth3r will make an announcement</h5>
-            <div v-for="(rule, index) in rules" :key="rule.id">
-                <ol>
+            <ol>
+                <div v-for="(rule, index) in rules" :key="rule.id">
                     <li><h3>{{ rule.title }}</h3>
                         <ul>
                             <li>{{ rule.rule }}</li>
                         </ul>
                     </li>
-                </ol>
-            </div>
+                </div>
+            </ol>
         </div>
     </div>`,
     data() {
