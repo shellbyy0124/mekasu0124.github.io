@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Vue Mastery</title>
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/styles.css">
     <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <title>Gawth3r</title>
   </head>
   <body>
     <div id="app">
-      <div class="nav-bar"></div>
-
-      <div class="cart">Cart({{ cart.length }})</div>
-      <product-display
-        :premium="premium"
-        @add-to-cart="updateAddCart"
-        @remove-from-cart="updateRemCart"
-        >
-      </product-display>
+      <title-details></title-details>
+      <about-details></about-details>
+      <rule-details></rule-details>
+      <github-details></github-details>
     </div>
     <script src="./main.js"></script>
-    <script src="./components/ProductDisplay.js"></script>
-    <script src="./components/ProductDetails.js"></script>
-    <script src="./components/reviewForm.js"></script>
-    <script src="./components/reviewList.js"></script>
+    <script src="./components/titleDetails.js"></script>
+    <script src="./components/aboutDetails.js"></script>
+    <script src="./components/ruleDetails.js"></script>
+    <script src="./components/githubDetails.js"></script>
     <script>const mountedApp = app.mount('#app')</script>
   </body>
 </html>
