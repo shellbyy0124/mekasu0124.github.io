@@ -3,27 +3,24 @@ app.component('game-display', {
     /*html*/
     `<div class="game-display">
         <div class="game-container">
-            <div class="box-1">
-                <h1>{{ title }}</h1>
-                <h3>{{ subTitle }}</h3>
-            </div>
-            <div class="box-2">
-                <div v-for="(game, index) in games" :key="game.id">
-                    <figure>
-                        <img :src="game.image">
-                        <figcaption>
-                            Game: <a :href="game.url">{{ game.name }}</a><br>
-                            Players: {{ game.playerCount }}
-                        </figcaption>
-                    </figure>
-                </div>
+            <h1>{{ title }}</h1>
+            <h3>{{ subTitle }}</h3>
+            
+            <div v-for="(game, index) in games" :key="game.id">
+              <figure>
+                <img :src="game.image">
+                  <figcaption>
+                    Game: <a :href="game.url">{{ game.name }}</a><br>
+                    Players: {{ game.playerCount }}
+                  </figcaption>
+              </figure>
             </div>
         </div>
     </div>`,
     data() {
         return {
-            title: 'Gawth3r\'s Gaming Extension',
-            subTitle: 'A Place For All Things Gaming Related',
+            a: 'Gawth3r\'s Gaming Extension',
+            b: 'A Place For All Things Gaming Related',
             games: [ // find a way to get discord integration to pull the number of members in each games role in the discord
                 { id: 1, name: 'Factorio', image: '../assets/images/factorio.jpg', url: 'https://www.factorio.com/', playerCount: 0 },
                 { id: 2, name: 'Minecraft', image: '../assets/images/minecraft.jpg', url: 'https://www.minecraft.net', playerCount: 0 },
@@ -32,12 +29,13 @@ app.component('game-display', {
             ]
         }
     },
-    methods: {
+    methods: {},
+    computed: {
         title() {
-            return this.title
+            return this.a
         },
         subTitle() {
-            return this.subTitle
+            return this.b
         }
     }
 })

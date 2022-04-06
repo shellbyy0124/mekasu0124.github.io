@@ -1,20 +1,26 @@
-app.component('rule-details',{
+app.component('rule-display',{
     template:
     /*html*/
-    `<div class="rule-details">
+    `<div class="rule-display">
         <div class="rule-container">
-            <h3>Rules For The Website Extension</h3>
-            <h5>These rules are subject to change at any time. In this event, Gawth3r will make an announcement</h5>
-            <div v-for="(rule, index) in rules" :key="rule.id">
-                <h3>{{ rule.id }}. {{ rule.title }}</h3>
-                <ul>
-                    <li>{{ rule.rule }}</li>
-                </ul>
+            <div id="box-1">
+                <h1>{{ title }}</h1>
             </div>
+            <div id="box-2">
+                <div v-for="(rule, index) in rules" :key="rule.id">
+                    <h3>{{ rule.id }}. {{ rule.title }}</h3>
+                    <ul>
+                        <li>{{ rule.rule }}</li>
+                    </ul>
+                </div>
+            </div>
+            <h5 style="width: 1000px;">***{{ disclaimer }}***</h5>
         </div>
     </div>`,
     data() {
         return {
+            title: 'Rules For The Website Extension',
+            disclaimer: 'These rules are subject to change at any time. In this event, Gawth3r will make an announcement',
             rules: [
                 { id: 1, title: 'Be Respectful!', rule: 'It does not matter if it is a staff member or another member of the discord, or website, extension.' },
                 { id: 2, title: 'Superior/Inferior Does Not Exist!', rule: 'No one person was born or created better than anyone else. We are all people living in the same messed up world as the person next to us. Each persons\' reality is different, and each persons\' reality is real. <strong>WE DO NOT BULLY!</strong>' },
@@ -28,5 +34,12 @@ app.component('rule-details',{
         }
     },
     methods: {},
-    computed: {}
+    computed: {
+        title() {
+            return this.title
+        },
+        disclaimer() {
+            return this.disclaimer
+        }
+    }
 })

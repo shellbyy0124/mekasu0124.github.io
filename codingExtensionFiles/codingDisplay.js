@@ -13,7 +13,7 @@ app.component('coding-display', {
                     <p>{{ lang.id }}. <a :href="lang.url">{{ lang.name }}</a></p>
                 </div>
             </div>
-        </ol>
+        </div>
     </div>`,
     data() {
         return {
