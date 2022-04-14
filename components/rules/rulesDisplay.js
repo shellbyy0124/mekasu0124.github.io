@@ -67,18 +67,18 @@ app6.component('rules-display', {
                 { id: 27, name: 'Perma-Banned', info: 'The role for those members who are in the final tier of the Punishment Table' }
             ],
             punishTable: [
-                { id: 1, name: 'Tier 1', desc: '0-5 Warnings = 15 minutes in the Muted Role' },
-                { id: 2, name: '', desc: '5-10 Warnings = 25 minutes in the Muted Role' },
-                { id: 3, name: '', desc: '10+ Warnings = 1 day in the Muted Role' },
-                { id: 4, name: 'Tier 2', desc: '0-5 Mutes = 1 day in the Kicked Role' },
-                { id: 5, name: '', desc: '5-10 Mutes = 3 days in the Kicked Role' },
-                { id: 6, name: '', desc: '10+ Mutes = 1 week in the Kicked Role' },
-                { id: 7, name: 'Tier 3', desc: '0-5 Kicks = 1 week in the Banned Role' },
-                { id: 8, name: '', desc: '5-10 Kicks = 2 weeks in the Banned Role' },
-                { id: 9, name: '', desc: '10+ Kicks = 1 month in the Banned Role' },
-                { id: 10, name: 'Tier 4', desc: '0-5 bans = 6 months in the Perma-Banned Role' },
-                { id: 11, name: '', desc: '5-10 Bans = 9 months in the Perma-Banned Role' },
-                { id: 12, name: '', desc: '10+ Bans = Permanently Banned. No Appeals' }
+                { id: 1, name: 'Tier 1.00', desc: '0-5 Warnings = 15 minutes in the Muted Role' },
+                { id: 2, name: 'Tier 1.40', desc: '5-10 Warnings = 25 minutes in the Muted Role' },
+                { id: 3, name: 'Tier 1.85', desc: '10+ Warnings = 1 day in the Muted Role' },
+                { id: 4, name: 'Tier 2.28', desc: '0-5 Mutes = 1 day in the Kicked Role' },
+                { id: 5, name: 'Tier 2.56', desc: '5-10 Mutes = 3 days in the Kicked Role' },
+                { id: 6, name: 'Tier 2.79', desc: '10+ Mutes = 1 week in the Kicked Role' },
+                { id: 7, name: 'Tier 3.05', desc: '0-5 Kicks = 1 week in the Banned Role' },
+                { id: 8, name: 'Tier 3.38', desc: '5-10 Kicks = 2 weeks in the Banned Role' },
+                { id: 9, name: 'Tier 3.79', desc: '10+ Kicks = 1 month in the Banned Role' },
+                { id: 10, name: 'Tier 4.21', desc: '0-5 bans = 6 months in the Perma-Banned Role' },
+                { id: 11, name: 'Tier 4.58', desc: '5-10 Bans = 9 months in the Perma-Banned Role' },
+                { id: 12, name: 'Tier 4.97', desc: '10+ Bans = Permanently Banned. No Appeals' }
             ]
         }
     },

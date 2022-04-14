@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Gawth3r Platform - Disord Extension</title>
+    <title>Gawth3r Platform - Newsletter Extension</title>
+    <link rel="stylesheet" href="./newsletterDisplay.css">
     <link rel="icon" href="../../assets/images/gawth3r_one.jpg">
-    <link rel="stylesheet" href="./discordDisplay.css">
     <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
   </head>
   <body>
@@ -13,17 +13,28 @@
         <a href="../../index.html">Gawth3r Home</a>
         <a href="../art/ArtExtension.html">Art Extension</a>
         <a href="../coding/CodingExtension.html">Coding Extension</a>
-        <a href="./DiscordExtension.html">Discord Extension</a>
+        <a href="../discord/DiscordExtension.html">Discord Extension</a>
         <a href="../games/GamingExtension.html">Gaming Extension</a>
         <a href="../rules/RulesExtension.html">Rules Extension</a>
         <a href="../about/AboutExtension.html">About Gawth3r</a>
-        <a href="../newsletter/NewsletterExtension.html">Gawth3rs Newsletters</a>
+        <a href="./NewsletterExtension.html">Gawth3rs Newsletters</a>
         <a href="">Sign In</a>
       </div>
-      <discord-display></discord-display>
     </div>
-    <script src="../../main.js"></script>
-    <script src="./discordDisplay.js"></script>
-    <script>const mountedApp = app4.mount('#app')</script>
+    <script src="./newsletterDisplay.js"></script>
+    <script>const mountedApp = app2.mount('#app')</script>
   </body>
 </html>
+
+<!--
+  data() {
+        return {
+            newsletters: []
+        }
+    },
+    methods: {
+        updateNewsletters(id) {
+            this.newsletters.push(id)
+        }
+    }
+  -->
