@@ -1,0 +1,44 @@
+.shellbyyColorScheme {
+    color: #301d0d;
+    color: #5f462d;
+    color: #785e3f;
+    color: #886f53;
+    color: #746754;
+    color: #998463;
+    color: #bbb2a3;
+    color: #e2e2e0;
+}
+
+.appleScheme {
+    color: #131313; /* background */
+    color: #2B2B2B; /* text */
+    color: #86868B; /* sub text or smaller text */
+    color: #1561F0; /* hyper-link colors */
+}
+
+.pcGamerScheme {
+    color: #0F1618; /* bar above nav bar */
+    color: #DC191B; /* nav bar background */
+    color: #FFFFFF; /* text is white on red, white on black, black on white, black on background */
+    color: #EDEDED; /* sub nav bar background */
+}
+
+.moorhouseScheme {
+    color: #4F2361; /* background */
+    color: #7F5281; /* unsure */
+    color: #FFFFFF; /* text */
+    color: #2A292E; /* unsure */
+}
+
+.authenticBrief {
+    color: #FDF5DF; /* background */
+    color: #5EBEC4; /* header colors */
+    color: #F92C85; /* text */
+}
+
+.transformFestival {
+    color: #ABF62D; /* top half */
+    color: #D6A3FB; /* bottom half */
+    color: black; /* text */
+    color: #FFFFFF; /* buttons */
+}

@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
 
-body {
-    margin: 0;
+html {
+    background: linear-gradient(to left, blue, silver, blue, silver, blue, blue, silver, blue, silver, blue);
+}
+
+* {
+    font-family: "Beau Rivage", cursive;
+    font-weight: bold;
 }
 
 .nav-bar {
@@ -28,49 +33,84 @@ body {
     color: silver;
 }
 
-.newsletter-display {
+.newsletter-container,
+.newsletter-image,
+.newsletter-info,
+.newsletter-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-img {
-    position: relative;
-    background: transparent;
-}
-
-.newsletter-display img {
-    z-index: 1;
-    width: 1680px;
-    height: 950px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-top: 70px;
+.newsletter-image img {
+    border-radius: 20px;
+    margin-top: 80px;
+    border: 5px solid black;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    background: transparent;
 }
 
-.newsletter-display h1 {
-    background-color: teal;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
+.newsletter-info h1 {
     font-size: 50px;
-    width: 740px;
-    height: 280px;
-    padding: 0;
-    margin: 0;
-    margin-left: 548px;
-    margin-top: -230px;
     text-align: center;
-    font-family: "Beau Rivage", cursive;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form,
+.newsletter-list {
+    background-color: silver;
     border-radius: 20px;
-    border: 3.5px solid black;
-    opacity: 50%;
+    border: 5px solid black;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form h3,
+.newsletter-list h3 {
+    font-size: 30px;
+    text-align: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-list {
+    margin-bottom: 10px;
+}
+
+.newsletter-form label,
+.newsletter-form input,
+.newsletter-form textarea,
+.button {
+    font-size: 30px;
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.newsletter-form textarea {
+    width: 600px;
+    height: 250px;
+}
+
+.button {
+    margin-bottom: 30px;
+}
+
+
+.newsletter-list ul,
+.newsletter-list li {
+    font-size: 30px;
+    list-style-type: none;
+}
+
+.newsletter-something {
+    display: flex;
+    justify-content: center;
 }

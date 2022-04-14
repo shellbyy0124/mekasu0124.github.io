@@ -1,23 +1,42 @@
 app2.component('newsletter-display', {
     template:
     /*html*/
-    `<div class="newsletter-display">
-        <img :src="image">
-        <h1>{{ information }}</h1>
-    </div>`,
+    `
+    <div class="newsletter-display">
+        <div class="newsletter-container">
+            <div class="newsletter-image">
+                <img :src="image">
+            </div>
+            <div class="newsletter-info">
+                <h1>{{ title }}</h1>
+            </div>
+        </div>
+        <div class="newsletter-something">
+            <newsletter-list v-if="newsletters.length" :newsletters="newsletters"></newsletter-list>
+            <!-- move newsletter-form to another page for me, you, and the person in charge of 
+                newsletters and posting them have permissions to do so -->
+            <newsletter-form @newsletter-submitted="addNewsletter"></newsletter-form>
+        </div>
+    </div>
+    `,
     data() {
         return {
-            a: 'Gawth3r\'s Newsletter Extension is currently under construction. Once this extension is ready to go, a newsletter job position will become avaialable. Please stay tuned for future updates!',
-            url: '../../assets/images/under_construction.png'
+            a: 'Gawth3r Platform - Newsletter Extension',
+            imagePath: '../../assets/images/gawth3r_one.jpg',
+            newsletters: []
         }
     },
-    methods: {},
+    methods: {
+        addNewsletter(letter) {
+            this.newsletters.push(letter)
+        }
+    },
     computed: {
-        information() {
+        title() {
             return this.a
         },
         image() {
-            return this.url
+            return this.imagePath
         }
     }
 })
