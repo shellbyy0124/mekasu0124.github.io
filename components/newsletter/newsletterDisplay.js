@@ -1,11 +1,10 @@
-app.component('newsletter-display', {
+app2.component('newsletter-display', {
     template:
     /*html*/
-    `
-    <div class="newsletter-display">
+    `<div class="newsletter-display">
         <img :src="image">
-    </div>
-    `,
+        <h1>{{ information }}</h1>
+    </div>`,
     data() {
         return {
             a: 'Gawth3r\'s Newsletter Extension is currently under construction. Once this extension is ready to go, a newsletter job position will become avaialable. Please stay tuned for future updates!',

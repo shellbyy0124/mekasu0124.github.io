@@ -28,7 +28,7 @@ body {
     color: silver;
 }
 
-.newsletter-display {
+.login-display {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -39,7 +39,7 @@ img {
     background: transparent;
 }
 
-.newsletter-display img {
+.login-display img {
     z-index: 1;
     width: 1680px;
     height: 950px;
@@ -54,7 +54,7 @@ img {
     background: transparent;
 }
 
-.newsletter-display h1 {
+.login-display h1 {
     background-color: teal;
     z-index: 2;
     position: absolute;
