@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
-body {
-    margin: 0;
+html {
+    background: linear-gradient(
+        to right,
+        red,
+        blue,
+        purple,
+        blue,
+        red,
+        blue,
+        purple,
+        blue,
+        red
+    )
 }
 
 * {
@@ -32,48 +43,87 @@ body {
     text-decoration: none;
 }
 
-.login-display {
+.login-display,
+.login-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-img {
-    position: relative;
-    background: transparent;
-}
-
-.login-display img {
-    z-index: 1;
-    width: 1680px;
-    height: 950px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-top: 70px;
+.login-display h1 {
+    font-size: 40px;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    background: transparent;
 }
 
-.login-display h1 {
-    background-color: teal;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    font-size: 39.5px;
-    width: 740px;
-    height: 280px;
-    padding: 0;
-    margin: 0;
-    margin-left: 548px;
-    margin-top: -230px;
+.login-form label,
+.login-form input {
+    font-size: 20px;
     text-align: center;
-    border-radius: 20px;
-    border: 3.5px solid black;
-    opacity: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
 }
+
+input.button {
+    width: 508px;
+    margin-top: 25px;
+}
+
+#blur.active {
+    filter:blur(0.5px);
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }

@@ -15,6 +15,7 @@ app5.component('game-display', {
     data() {
         return {
             a: 'Gawth3r Platform - Gaming Extension',
+            slideIndex: 1,
             imageUrl: '../../assets/images/gamingStation.png',
             info: [
                 'The greatest place ever for gamers was, and still is, the arcade!',

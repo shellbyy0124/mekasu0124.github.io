@@ -17,7 +17,7 @@ app10.component('newsletter-display', {
     data() {
         return {
             a: 'Gawth3rs\' Newsletters',
-            signIn: false,
+            signIn: true,
             newsletters: []
         }
     },

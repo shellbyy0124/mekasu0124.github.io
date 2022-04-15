@@ -2,3 +2,10 @@ Kata To-Do:
     1) Fix screen alignment upon resizing
     2) Initiate database
     3) write user input from Join Us, Reviews, Newsletters, and Sign Up to database
+
+
+Shellbyy To-Do: 
+    1) Fix login screen.
+        -- Supposed to be a pop up with a blurred background instead of an entirely new window
+    2) Add animation to slide shows
+        -- have image of slide, when selected, fill the entire background image
