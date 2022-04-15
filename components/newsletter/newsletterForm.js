@@ -14,7 +14,7 @@ app10.component('newsletter-form', {
         <input id="date" placeholder="MM/DD/YYYY HH:MM" v-model="date">
 
         <label for="message">Newsletter Details</label>
-        <textarea id="message" v-model="message"></textarea>
+        <textarea v-model="message"></textarea>
 
         <input class="button" type="submit" value="Create Newsletter!" style="width: 606px;">
     </form>`,

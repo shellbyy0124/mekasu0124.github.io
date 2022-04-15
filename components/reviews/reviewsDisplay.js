@@ -6,13 +6,16 @@ app9.component('review-display', {
         <div class="review-container">
             <h1>{{ title }}</h1>
         </div>
+        <div class="ifVerified" v-if="signIn">
+            <review-form @review-submitted="addReview"></review-form>
+        </div>
         <review-list v-if="reviews.length" :reviews="reviews"></review-list>
-        <review-form @review-submitted="addReview"></review-form>
     </div>
     `,
     data() {
         return {
-            a: 'Gawth3r Platform - Review Extension',
+            a: 'Gawth3rs\' Reviews',
+            signIn: true,
             reviews: []
         }
     },

@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     padding: 3px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 16px;
     background: linear-gradient(
         to right,
@@ -29,6 +29,7 @@ body {
 
 .nav-bar a {
     color: silver;
+    text-decoration: none;
 }
 
 .login-display {
@@ -64,7 +65,7 @@ img {
     top: 50%;
     left: 0;
     right: 0;
-    font-size: 50px;
+    font-size: 39.5px;
     width: 740px;
     height: 280px;
     padding: 0;

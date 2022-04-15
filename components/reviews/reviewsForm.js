@@ -16,7 +16,6 @@ app9.component('review-form', {
 
         <label for="stars">Select Number Of Stars</label>
         <select name="stars" id="stars" v-model.number="stars">
-            <option>Select One</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -26,12 +25,11 @@ app9.component('review-form', {
 
         <label for="recommend">Recommend?</label>
         <select name="recommend" id="recommend" v-model="recommend">
-            <option>Select One</option>
             <option>Yes</option>
             <option>No</option>
         </select>
 
-        <input class="button" type="submit" value="Create Review!">
+        <input style="width: 800px; border-radius: 20px;" class="button" type="submit" value="Create Review!">
     </div>
     `,
     data() {
@@ -45,7 +43,7 @@ app9.component('review-form', {
     },
     methods: {
         onSubmit() {
-            if (this.title === '' || this.author === '' || this.date === '' || this.stars === this.stars[0] || this.recommend === this.recommend[0]) {
+            if (this.title === '' || this.author === '' || this.date === '') {
                 alert('All Fields Must Be Filled Out!')
                 return
             }

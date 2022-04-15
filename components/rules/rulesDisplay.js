@@ -7,8 +7,8 @@ app6.component('rules-display', {
             <p>{{ getInfo }}</p>
             <table>
                 <tr v-for="(rule, index) in rulesTable" :key="index">
-                    <th>{{ rule.name }}</th>
-                    <td>{{ rule.info }}</td>
+                    <td>{{ rule.name }}</td>
+                    <td v-html="rule.info">{{ rule.info }}</td>
                 </tr>
             </table>
         </div>
@@ -54,8 +54,8 @@ app6.component('rules-display', {
                 { id: 7, name: 'Private Messaging', info: 'Do not pop into someone\'s DM\'s without their permission === perma-banned.' },
                 { id: 8, name: 'Mentioning', info: 'Gawth3r, and Staff, are the only ones who are to be pinging any other members or roles. If you need to ping someone within a channel, please reply to one of their messages. DO NOT USE @HERE, @EVERYONE UNDER NO CIRCUMSTANCES!' },
                 { id: 9, name: 'Questions/Support', info: 'There is an entire support category created for you to receive the necessary support for your given topic/project. Do not request support in any other categories/channels that are not marked specifically for support!' },
-                { id: 10, name: 'Sexting/Sexual/Pornographic/Illegal/Hacking/Personal Information Content/Behavior/Chat', info: 'Plain and simple. PG-13. Not hard to comprehend. This will get you >= 6 Months in the Perma-Banned channel and reported to Discord.' },
-                { id: 11, name: 'Bullying/Personal Attacks/Descrimination/Racism/Judgementalism', info: 'Same as above === >= 6 Months in the Perma-Banned Role and will result in a note placed in your account along with a tag on your profile for every message you send.' },
+                { id: 10, name: 'Sexual/Illegal Content', info: 'Sexting/Sexual/Pornographic Illegal/Hacking/Personal Information Content/Behavior/Chat Plain and simple. PG-13. Not hard to comprehend. This will get you >= 6 Months in the Perma-Banned channel and reported to Discord.' },
+                { id: 11, name: 'Being Rude', info: 'Bullying/Personal Attacks/Descrimination/Racism/Judgementalism === >= 6 Months in the Perma-Banned Role and will result in a note placed in your account along with a tag on your profile for every message you send.' },
                 { id: 12, name: 'Politics', info: 'This server is hosted in a free country, the USA, however, when discussin politics, do it in your own time. Any fights about politics, religion, sex, age, sexual orientation, drama, etc will be instantly perma-banned for >= 12 Hours. NO DRAMA AND NO HATRED!' },
                 { id: 13, name: 'Foul Language', info: 'I understand that a majority of us are adults, however, do not over-use foul language in chat/voice channels. We respect the right to those who are minors in keeping their environments clean out of respect for them and their parents!' },
                 { id: 14, name: 'Advertisements', info: 'Gawth3r is all about helping you get to the next level, however, getting to that next level has steps and procedures that have to be followed. DO NOT post ANY advertisement OF ANY KIND within the Gawth3r Platform without WRITTEN consent from appropriate parties! Those parties include, but are not limited to, Owners, Head Administrator, Administrators, Newsletter Staff' },
@@ -68,19 +68,20 @@ app6.component('rules-display', {
                 { id: 21, name: 'Joining Pre-Made Voice Channels', info: 'Do Not just POP into a channel and start talking. When joining an exisiting conversation, be patient and listen. Show conversation edicate and wait your turn to join in. When giving your response, ensure that you are on topic with the conversation as well.' }
             ],
             punishTable: [
-                { id: 0, name: 'info', desc: 'Gawth3r runs off of an Infraction Based System as follows.'},
-                { id: 1, name: 'Tier 1.00', desc: '0-5 Warnings = 15 minutes in the Muted Role' },
-                { id: 2, name: 'Tier 1.40', desc: '5-10 Warnings = 25 minutes in the Muted Role' },
-                { id: 3, name: 'Tier 1.85', desc: '10+ Warnings = 1 day in the Muted Role' },
-                { id: 4, name: 'Tier 2.28', desc: '0-5 Mutes = 1 day in the Kicked Role' },
-                { id: 5, name: 'Tier 2.56', desc: '5-10 Mutes = 3 days in the Kicked Role' },
-                { id: 6, name: 'Tier 2.79', desc: '10+ Mutes = 1 week in the Kicked Role' },
-                { id: 7, name: 'Tier 3.05', desc: '0-5 Kicks = 1 week in the Banned Role' },
-                { id: 8, name: 'Tier 3.38', desc: '5-10 Kicks = 2 weeks in the Banned Role' },
-                { id: 9, name: 'Tier 3.79', desc: '10+ Kicks = 1 month in the Banned Role' },
-                { id: 10, name: 'Tier 4.21', desc: '0-5 bans = 6 months in the Perma-Banned Role' },
-                { id: 11, name: 'Tier 4.58', desc: '5-10 Bans = 9 months in the Perma-Banned Role' },
-                { id: 12, name: 'Tier 4.97', desc: '10+ Bans = Permanently Banned. No Appeals' }
+                { id: 0, name: 'Tier', desc: 'The following information are the guidelines for our community' },
+                { id: 1, name: 'Caption', desc: 'Gawth3r runs off of an Infraction Based System as follows.'},
+                { id: 2, name: '1', desc: '0-5 Warnings = 15 minutes in the Muted Role' },
+                { id: 3, name: '1', desc: '5-10 Warnings = 25 minutes in the Muted Role' },
+                { id: 4, name: '1', desc: '10+ Warnings = 1 day in the Muted Role' },
+                { id: 5, name: '2', desc: '0-5 Mutes = 1 day in the Kicked Role' },
+                { id: 6, name: '2', desc: '5-10 Mutes = 3 days in the Kicked Role' },
+                { id: 7, name: '2', desc: '10+ Mutes = 1 week in the Kicked Role' },
+                { id: 8, name: '3', desc: '0-5 Kicks = 1 week in the Banned Role' },
+                { id: 9, name: '3', desc: '5-10 Kicks = 2 weeks in the Banned Role' },
+                { id: 10, name: '3', desc: '10+ Kicks = 1 month in the Banned Role' },
+                { id: 11, name: '4', desc: '0-5 bans = 6 months in the Perma-Banned Role' },
+                { id: 12, name: '4', desc: '5-10 Bans = 9 months in the Perma-Banned Role' },
+                { id: 13, name: '4', desc: '10+ Bans = Permanently Banned. No Appeals' }
             ]
         }
     },

@@ -1,0 +1,4 @@
+Kata To-Do:
+    1) Fix screen alignment upon resizing
+    2) Initiate database
+    3) write user input from Join Us, Reviews, Newsletters, and Sign Up to database

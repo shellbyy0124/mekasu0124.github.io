@@ -35,7 +35,6 @@ html {
 .rules-display {
     display: flex;
     justify-content: center;
-    flex-direction: column;
 }
 
 .rules-display #box-1 h1 {
@@ -67,6 +66,12 @@ html {
     color: silver;
 }
 
+.rules-display #box-1,
+.rules-display #box-2 {
+    width: 50vw;
+    height: 100vh;
+}
+
 .rules-display #box-1 table,
 .rules-display #box-2 table {
     background-color: gray;
@@ -74,22 +79,18 @@ html {
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 1500px;
+    width: 50%;
     font-size: 20px;
     padding: 10px;
 }
 
 .rules-display #box-2 table {
-    width: 800px;
+    width: 50vw;
 }
 
-.rules-display #box-1 th {
-    width: 100px;
-}
-
-.rules-display #box-1 th,
+/* rules table */
 .rules-display #box-1 td,
-.rules-display #box-2 th,
+.rules-display #box-2 th, /* punish table */
 .rules-display #box-2 td {
     border: 3px solid black;
     border-radius: 20px;
