@@ -3,19 +3,19 @@ app6.component('rules-display', {
     /*html*/
     `<div class="rules-display">
         <div id="box-1">
-            <h1>{{ title }}</h1>
-            <h3>{{ subTitle }}</h3>
+            <h3>{{ title }}</h3>
+            <p>{{ getInfo }}</p>
             <table>
-                <tr v-for="(role, index) in role_names" :key="role.id">
-                    <th>{{ role.id }}</th>
-                    <td>{{ role.name }}</td>
-                    <td>{{ role.info }}</td>
+                <tr v-for="(rule, index) in rulesTable" :key="index">
+                    <th>{{ rule.id }}</th>
+                    <td>{{ rule.name }}</td>
+                    <td>{{ rule.info }}</td>
                 </tr>
             </table>
         </div>
         <div id="box-2">
             <h3>{{ subTitle2 }}</h3>
-            <p>{{ getInfo }}</p>
+            <p>{{ getInfo2 }}</p>
             <table>
                 <tr v-for="(punish, index) in punishTable" :key="punish.id">
                     <th>{{ punish.name }}</th>
@@ -26,7 +26,7 @@ app6.component('rules-display', {
     </div>`,
     data() {
         return {
-            a: 'Gawth3r Platform - Discord Extension Roles',
+            a: 'Gawth3rs\' Rules Table',
             b: 'The roles listed below are in order from highest to lowest in heirarchy',
             c: 'Gawth3rs\' Punishment Table',
             d: [
@@ -37,34 +37,23 @@ app6.component('rules-display', {
                 'when handling any given situation, and the tier chosen may change given the',
                 'severity of the situation.'
             ],
-            role_names: [
-                { id: 1, name: 'Owner', info: 'The role for the Website and Discord Extension Owners' },
-                { id: 2, name: 'Devs', info: 'The role for those who are on the development team' },
-                { id: 3, name: 'Gawth3r', info: 'The role for the main bot himself, Gawth3r' },
-                { id: 4, name: 'Gawth3rs Brothers', info: 'The role for the bots whom assist Gawth3r' },
-                { id: 5, name: 'Head Administrator', info: 'The role for the Administrator in charge of everyone' },
-                { id :6, name: 'Administrator', info: 'The role for those who only help administrate the Discord Extension of the Gawth3r Platform' },
-                { id: 7, name: 'Moderator', info: 'The role for those who only help moderate the Discord Extension of the Gawth3r Platform' },
-                { id: 8, name: 'Cyber Administrator', info: 'The role for those who only help administrate the Website Extension of the Gawth3r Platform' },
-                { id: 9, name: 'Cyber Moderator', info: 'The role for those who only help moderate the Website Extension of the Gawth3r Platform' },
-                { id: 10, name: 'Support Staff', info: 'The role for those who assist within the Support Extension of the Gawth3r Platform' },
-                { id: 11, name: 'Community Helper', info: 'The role for those who assist within the community as whole' },
-                { id: 12, name: 'WoW Staff', info: 'The role for those who are staff members within our World of Warcraft Guild' },
-                { id: 13, name: 'WoW Member', info: 'The role for those who are members within our World of Warcraft Guild' },
-                { id: 14, name: 'Nitro Member', info: 'The role for those who are Discord Nitro Subscribers' },
-                { id: 15, name: 'Summoners War Staff', info: 'The role for those who are the GM and Co-GM of our Summoners War Guild' },
-                { id: 16, name: 'Summoners War', info: 'The role for those who are members within our Summoners War Guild' },
-                { id: 17, name: 'Artistry Administrator', info: 'The role for those who help administrate the Art Extension of the Gawth3r Platform' },
-                { id: 18, name: 'Artistry', info: 'The role for those who are members within the Art Extension of the Gawth3r Platform' },
-                { id: 19, name: 'Programming Administrator', info: 'The role for those who help adminstrate the Coding Extension of the Gawth3r Platform' },
-                { id: 20, name: 'Programming', info: 'The role for those who are members within the Coding Extension of the Gawth3r Platform' },
-                { id: 21, name: 'Gaming Administrator', info: 'The role for those who help administrate the Gaming Extension of the Gawth3r Platform' },
-                { id: 22, name: 'Gaming', info: 'The role for those who are members within the Gaming Extension of the Gawth3r Platform' },
-                { id: 23, name: 'Member', info: 'The role for those who are members within the Discord Extension as a whole. (all members are given this role regardless)' },
-                { id: 24, name: 'Muted', info: 'The role for those members who are within their first tier of the Punishment Table' },
-                { id: 25, name: 'Kicked', info: 'The role for those members who are within their second tier of the Punishment Table' },
-                { id: 26, name: 'Banned', info: 'The role for those members who are within their third tier of the Punishment Table' },
-                { id: 27, name: 'Perma-Banned', info: 'The role for those members who are in the final tier of the Punishment Table' }
+            e: [
+                'The rules listed below are designed to allow a user-ran, user-friendly,',
+                'environment. Most of Gawth3r is ran automatically through the bot and',
+                'his brothers. All rules are to be followed at all times. It does not',
+                'matter the scenario, or whom the staff is in the scenario, all rules and',
+                'staff member directions are to be followed. If you feel a staff members',
+                'decision is injust, then please create a support ticket.'
+            ],
+            rulesTable: [
+                { id: 1, name: 'Respect Staff At All Times!', info: 'It does not matter who the staff member is, all members are required to follow given instructions when a situation may arise.' },
+                { id: 2, name: 'Do Not Block Staff!', info: 'Staff Members and Gawth3r and his brothers are not to be blocked at any time. Blocking the bot will cause problems with your character profile, and blocking staff will get you perma-banned.' },
+                { id: 3, name: 'Follow Channel Topics!', info: 'All Channels have a topic. It would be wise of you to follow that. All messags that are seen by staff that do not follow the channels topic will be subject to deletion.' },
+                { id: 4, name: 'We Are A Community', info: 'Yes we are a community For and By the People, however, do keep in mind that where this is a democracy, there are also laws to follow. The otherside to that is remember, this is my server. I will remove you -Mekasu' },
+                { id: 5, name: 'Blank Reason', info: 'Insert Reason Information Here' },
+                { id: 6, name: 'Blank Reason', info: 'Insert Reason Information Here' },
+                { id: 7, name: 'Blank Reason', info: 'Insert Reason Information Here' },
+                { id: 8, name: 'Blank Reason', info: 'Insert Reason Information Here' }
             ],
             punishTable: [
                 { id: 1, name: 'Tier 1.00', desc: '0-5 Warnings = 15 minutes in the Muted Role' },
@@ -87,13 +76,21 @@ app6.component('rules-display', {
         title() {
             return this.a
         },
-        subTitle() {
-            return this.b
-        },
         subTitle2() {
             return this.c
         },
         getInfo() {
+            let sentence = ''
+
+            for (let i = 0; i < this.e.length; i++) {
+                let x = this.e[i] + ' '
+
+                sentence += x 
+            }
+
+            return sentence
+        },
+        getInfo2() {
             let sentence = ''
 
             for (let i = 0; i < this.d.length; i++) {

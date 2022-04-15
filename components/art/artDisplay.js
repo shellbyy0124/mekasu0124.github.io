@@ -1,4 +1,4 @@
-app2.component('art-display', {
+app7.component('art-display', {
     template:
     /*html*/
     `<div class="art-display">
@@ -9,7 +9,7 @@ app2.component('art-display', {
     data() {
         return {
             imageUrl: '../../assets/images/artEasel.png',
-            a: 'Gawth3r Platform - Art Extension',
+            a: 'Gawth3rs\' Art',
             info: [
                 'The <i>Art Extension</i> is a place meant for artists and their fans.',
                 'To give each extension a category within the <i>Discord Extension</i>',

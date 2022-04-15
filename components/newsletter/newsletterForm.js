@@ -1,4 +1,4 @@
-app2.component('newsletter-form', {
+app10.component('newsletter-form', {
     template: 
     /*html*/
     `<form class="newsletter-form" @submit.prevent="onSubmit">

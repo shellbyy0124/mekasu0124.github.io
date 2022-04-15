@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
 html {
     background: linear-gradient(to left, blue, silver, blue, silver, blue, blue, silver, blue, silver, blue);
 }
 
 * {
-    font-family: "Beau Rivage", cursive;
+    font-family: 'Lacquer', cursive;
     font-weight: bold;
 }
 
@@ -13,9 +13,7 @@ html {
     display: flex;
     justify-content: space-evenly;
     padding: 3px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: "Beau Rivage", cursive;
+    font-size: 20px;
     padding: 16px;
     background: linear-gradient(
         to right,
@@ -52,7 +50,7 @@ html {
 }
 
 .newsletter-info h1 {
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -70,7 +68,7 @@ html {
 
 .newsletter-form h3,
 .newsletter-list h3 {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     width: 500px;
     margin-left: auto;
@@ -85,7 +83,7 @@ html {
 .newsletter-form input,
 .newsletter-form textarea,
 .button {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     width: 600px;
     margin-left: auto;
@@ -106,7 +104,7 @@ html {
 
 .newsletter-list ul,
 .newsletter-list li {
-    font-size: 30px;
+    font-size: 20px;
     list-style-type: none;
 }
 

@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
 html {
     background: linear-gradient(to right, #5EBEC4, #F92C85, #5EBEC4, #F92C85, #5EBEC4);
 }
 
+* {
+    font-family: 'Lacquer', cursive;
+    font-weight: bold;
+}
+
 .nav-bar {
     display: flex;
     justify-content: space-evenly;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: "Beau Rivage", cursive;
+    font-size: 20px;
     padding: 16px;
     background: linear-gradient(
         to right,
@@ -27,30 +30,14 @@ html {
     color: silver;
 }
 
-img {
-    position: relative;
-    background: transparent;
-}
-
 .game-display {
     display: flex;
     justify-content: center;
-    flex-direction: column;
 }
 
 .game-display img {
-    z-index: 1;
     width: 500px;
     height: 500px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 30%;
 }
 
 .game-display h1 {
@@ -60,19 +47,17 @@ img {
     margin-right: auto;
     z-index: 2;
     margin-top: 90px;
-    font-family: "Beau Rivage", cursive;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .game-display p {
     text-align: center;
-    width: 600px;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
     z-index: 3;
-    margin-top: 30px;
+    margin-top: 20px;
     font-weight: bold;
     font-size: 35px;
     word-spacing: 2px;
-    font-family: "Beau Rivage", cursive;
 }

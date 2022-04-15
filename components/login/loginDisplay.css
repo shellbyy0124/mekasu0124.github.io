@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
 body {
     margin: 0;
+}
+
+* {
+    font-family: 'Lacquer', cursive;
+    font-weight: bold;
 }
 
 .nav-bar {
@@ -9,8 +14,6 @@ body {
     justify-content: space-evenly;
     padding: 3px;
     font-size: 30px;
-    font-weight: bold;
-    font-family: "Beau Rivage", cursive;
     padding: 16px;
     background: linear-gradient(
         to right,
@@ -69,7 +72,6 @@ img {
     margin-left: 548px;
     margin-top: -230px;
     text-align: center;
-    font-family: "Beau Rivage", cursive;
     border-radius: 20px;
     border: 3.5px solid black;
     opacity: 50%;

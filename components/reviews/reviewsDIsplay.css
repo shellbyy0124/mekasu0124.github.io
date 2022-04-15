@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+html {
+    background: linear-gradient(
+        to right,
+        red, yellow, green,
+        to left,
+        orange, purple, blue
+    )
+}
+
+* {
+    font-family: 'Lacquer', cursive;
+    font-weight: bold;
+}

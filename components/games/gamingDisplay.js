@@ -3,9 +3,13 @@ app5.component('game-display', {
     /*html*/
     `
     <div class="game-display">
-        <h1>{{ title }}</h1>
-        <img :src="image">
-        <p>{{ caption }}</p>
+        <div id="box-1">
+            <img :src="image">
+        </div>
+        <div id="box-2">
+            <h1>{{ title }}</h1>
+            <p>{{ caption }}</p>
+        </div>
     </div>
     `,
     data() {

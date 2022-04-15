@@ -1,4 +1,4 @@
-app2.component('newsletter-display', {
+app10.component('newsletter-display', {
     template:
     /*html*/
     `

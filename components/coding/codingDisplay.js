@@ -11,7 +11,7 @@ app3.component('coding-display', {
     data() {
         return {
             imageUrl: '../../assets/images/laptop.png',
-            a: 'Gawth3r Platform - Coding Extension',
+            a: 'Gawth3rs\' Coding',
             info: [
                 'The <i>Coding Extension</i> is a place for programmers, and those alike, to share',
                 'their ideas, code, and more. As the developer that built this site, I wanted to give',

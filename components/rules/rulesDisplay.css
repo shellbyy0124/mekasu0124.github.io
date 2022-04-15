@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
 html {
     background: linear-gradient(to right, blue, green, blue, green, blue);
 }
 
 * {
-    font-family: "Beau Rivage", cursive;
+    font-family: "Lacquer", cursive;
     font-weight: bold;
 }
 
 .nav-bar {
     display: flex;
     justify-content: space-evenly;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Beau Rivage", cursive;
     padding: 16px;
@@ -35,7 +35,6 @@ html {
 .rules-display {
     display: flex;
     justify-content: center;
-    flex-direction: column;
 }
 
 .rules-display #box-1 h1 {
@@ -44,6 +43,7 @@ html {
     width: 726px;
     margin-left: auto;
     margin-right: auto;
+    color: silver;
 }
 
 .rules-display #box-1 h3,
@@ -53,24 +53,39 @@ html {
     width: 542px;
     margin-left: auto;
     margin-right: auto;
+    color: silver;
 }
 
+.rules-display #box-1 p,
 .rules-display #box-2 p {
     font-size: 30px;
     text-align: center;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
+    color: silver;
 }
 
-.rules-display #box-1 table,
-.rules-display #box-2 table {
+.rules-display #box-1 table {
+    background-color: gray;
     border: 5px solid black;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
     font-size: 20px;
+    padding: 10px;
+}
+
+.rules-display #box-2 table {
+    background-color: gray;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .rules-display #box-1 th,
@@ -79,5 +94,5 @@ html {
 .rules-display #box-2 td {
     border: 3px solid black;
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
 }

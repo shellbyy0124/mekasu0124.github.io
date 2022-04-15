@@ -3,24 +3,28 @@ app7.component('about-display', {
     /*html*/
     `
     <div class="about-display">
-        <h1>{{ title }}</h1>
-        <code v-html="backStory">{{ backStory }}</code>
-        <a href="https://www.github.com/gawth3rPlatform">
-            Curious About How Gawth3r Works Now?
-        </a>
-        <div class="buttler-list">
-            <h3>{{ subTitle }}</h3>
-            <ul v-for="(link, index) in bbLinks" :key="link.id">
-                <li><a href="link.url">{{ link.name }}</a></li>
-            </ul>
+        <div id="box-1">
+            <a class="reviewLink" href="https://www.github.com/gawth3rPlatform">
+                Curious About How Gawth3r Works Now?
+            </a>
+            <h1>{{ title }}</h1>
+            <code v-html="backStory">{{ backStory }}</code>
         </div>
-        <div class="gawth3r-list">
-            <h3>{{ subTitle2 }}</h3>
-            <ul v-for="(link2, index2) in gaLinks" :key="link2.id">
-                <li><a href="link2.url">{{ link2.name }}</a></li>
-            </ul>
+        <div id="box-2">
+            <div class="buttler-list">
+                <h3>{{ subTitle }}</h3>
+                <ul v-for="(link, index) in bbLinks" :key="link.id">
+                    <li><a href="link.url">{{ link.name }}</a></li>
+                </ul>
+            </div>
+            <div class="gawth3r-list">
+                <h3>{{ subTitle2 }}</h3>
+                <ul v-for="(link2, index2) in gaLinks" :key="link2.id">
+                    <li><a href="link2.url">{{ link2.name }}</a></li>
+                </ul>
+            </div>
         </div>
-  </div>
+    </div>
     `,
     data() {
         return {

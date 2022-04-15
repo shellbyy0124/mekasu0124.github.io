@@ -1,4 +1,4 @@
-app2.component('newsletter-list', {
+app10.component('newsletter-list', {
     props: {
         newsletters: {
             type: Array,

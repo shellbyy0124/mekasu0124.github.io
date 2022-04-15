@@ -53,12 +53,14 @@ const app8 = Vue.createApp({
     computed: {}
 })
 
+// ReviewsExtension.html
 const app9 = Vue.createApp({
     data() {},
     methods: {},
     computed: {}
 })
 
+// NewsletterExtension.html
 const app10 = Vue.createApp({
     data() {},
     methods: {},

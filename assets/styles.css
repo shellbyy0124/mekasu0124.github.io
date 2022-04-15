@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
 html {    
     background: linear-gradient(to right, #D6A3FB, #ABF62D, #D6A3FB);
 }
 
+* {
+    font-family: 'Lacquer', cursive;
+    font-weight: bold;
+}
+
 .nav-bar {
     display: flex;
     justify-content: space-evenly;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: "Beau Rivage", cursive;
+    font-size: 20px;
     padding: 16px;
     background: linear-gradient(
         to right,
@@ -44,25 +47,22 @@ html {
 .home-display h3 {
     color: black; 
     text-align: center;
-    font-family: "Beau Rivage", cursive;
 }
 
 .home-display h1 {
-    font-size: 70px;
+    font-size: 50px;
 }
 
 .home-display h3 {
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .home-display p {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    font-family: "Beau Rivage", cursive;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
-    font-weight: bold;
     letter-spacing: 2px;
 }
 
@@ -130,3 +130,4 @@ html {
     margin-left: auto;
     margin-right: auto;
 }
+
