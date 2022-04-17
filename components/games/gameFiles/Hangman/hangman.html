@@ -1,37 +1,65 @@
-<main id="app" @keyup="handleKeyPress">
-	<div class="container">
-		<p id="quote" :class="{ 'strike': strikeout, 'highlight': puzzleComplete }">
-			<span v-for="word in splitQuote">
-				<template v-for="letter in word">{{ isRevealed(letter) }}</template>
-			</span>
-			<small v-if="gameOver">
-				—{{ quoteAuthor }}
-			</small>
-		</p>
-
-		<div class="status">
-			<h2>Strikes:</h2>
-			<ul class="status">
-				<li v-for="strike in strikes">{{ strike.icon }}</li>
-			</ul>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Gawth3r Platform - Hangman</title>
+    <link rel="stylesheet" href="./hangman.css">
+    <link rel="icon" href="../../../../assets/images/gawth3r_one.jpg">
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar">
+        <a href="../../../../index.html">Home</a>
+        <a href="../../../art/ArtExtension.html">Art</a>
+        <a href="../../../coding/CodingExtension.html">Coding</a>
+        <a href="../../../discord/DiscordExtension.html">Discord</a>
+        <a href="../../../games/GamingExtension.html">Gaming</a>
+        <a href="../../../rules/RulesExtension.html">Rules</a>
+        <a href="../../../about/AboutExtension.html">About</a>
+        <a href="../../../newsletter/NewsletterExtension.html">Newsletters</a>
+        <a href="../../../login/LoginExtension.html">Sign In</a>
+      </div>
+			<div id="box-32" @keyup="handleKeyPress">
+				<div class="container">
+					<p id="quote" :class="{ 'strike': strikeout, 'highlight': puzzleComplete }">
+						<span v-for="word in splitQuote">
+							<template v-for="letter in word">{{ isRevealed(letter) }}</template>
+						</span>
+						<small v-if="gameOver">
+							—{{ quoteAuthor }}
+						</small>
+					</p>
+			
+					<div class="status">
+						<h2>Strikes:</h2>
+						<ul class="status">
+							<li v-for="strike in strikes">{{ strike.icon }}</li>
+						</ul>
+					</div>
+			
+					<div id="button-board">
+						<button
+							v-for="letter in letters"
+							@click="guess(letter)"
+							:class="{'strike': badGuesses.includes(letter), 'highlight': guesses.includes(letter)}"
+							:disabled="guesses.includes(letter) || gameOver"
+						>
+							<span class="letter" :class="{'riser': guesses.includes(letter)}">{{ letter }}</span>
+							<span class="background"></span>
+						</button>
+					</div>
+					
+					<div class="status">
+						<p>{{ message }}</p>
+					</div>
+			
+					<button id="new-game" @click="newGame" :class="{'highlight': gameOver}">New game</button>
+				</div>
+			</div>
 		</div>
-
-		<div id="button-board">
-			<button
-				v-for="letter in letters"
-				@click="guess(letter)"
-				:class="{'strike': badGuesses.includes(letter), 'highlight': guesses.includes(letter)}"
-				:disabled="guesses.includes(letter) || gameOver"
-			>
-				<span class="letter" :class="{'riser': guesses.includes(letter)}">{{ letter }}</span>
-				<span class="background"></span>
-			</button>
-		</div>
-		
-		<div class="status">
-			<p>{{ message }}</p>
-		</div>
-
-		<button id="new-game" @click="newGame" :class="{'highlight': gameOver}">New game</button>
-	</div>
-</>
+		<script src="../../../../main.js"></script>
+		<script src="./hangman.js"></script>
+		<script>const mountedApp = app11.mount('#app')</script>
+	</body>
+</html>

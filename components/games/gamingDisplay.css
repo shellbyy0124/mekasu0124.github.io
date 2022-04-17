@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
-html {
-    background: linear-gradient(to right, #5EBEC4, #F92C85, #5EBEC4, #F92C85, #5EBEC4);
+* {
+  font-family: 'Lacquer', cursive;
+  font-weight: bold;
 }
 
-* {
-    font-family: 'Lacquer', cursive;
-    font-weight: bold;
+html {
+    background: linear-gradient(to right, #5EBEC4, #F92C85, #5EBEC4, #F92C85, #5EBEC4);
 }
 
 .nav-bar {
@@ -67,6 +67,11 @@ html {
     word-spacing: 2px;
 }
 
+.text a {
+  color: white;
+  font-size: 30px;
+}
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -112,7 +117,7 @@ html {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 70px;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
