@@ -1,43 +1,31 @@
-app7.component('art-display', {
+app5.component('art-display', {
     template:
-    /*html*/
-    `<div class="art-display">
-        <img :src="image">
-        <h1>{{ title }}</h1>
-        <p v-html="caption">{{ caption }}</p>
-    </div>`,
+    `
+    <div class="art-display">
+        <div class="nav-bar">
+            <div v-for="(item, index) in navBarButtons" :key="index">
+                <a :href="item.link">{{ item.name }}</a>
+            </div>
+        </div>
+        <p>
+            THE ART DISPLAY WEBSITE WILL BE SET UP AS THE COMMUNITY GROWS.
+            AS FOR NOW THIS PAGE WILL REMAIN UNDER CONSTRUCTION<br>
+            <img src="../../assets/images/under_construction.png">
+        </p>
+    </div>
+    `,
     data() {
         return {
-            imageUrl: '../../assets/images/artEasel.png',
-            a: 'Gawth3rs\' Art',
-            info: [
-                'The <i>Art Extension</i> is a place meant for artists and their fans.',
-                'To give each extension a category within the <i>Discord Extension</i>',
-                'just wasn\'t enough for me. I had to give everyone their own communities',
-                'on the <i>Website Extension</i> as a whole. A couple of my very close',
-                'friends are artists, and I wanted to give them their own area to go explore',
-                'and have fun with other artists so welcome aboard!'
+            navBarButtons: [
+                { id: 1, name: 'Home', link: '../../index.html' },
+                { id: 2, name: 'About', link: '../about/About.html' },
+                { id: 3, name: 'Extensions', link: '../router/Router.html' },
+                { id: 4, name: 'Newsletters', link: '../newsletters/Newsletters.html' },
+                { id: 5, name: 'Reviews', link: '../reviews/Reviews.html' },
+                { id: 6, name: 'Sign-In', link: '../signin/SignIn.html' }
             ]
         }
     },
     methods: {},
-    computed: {
-        image() {
-            return this.imageUrl
-        },
-        title() {
-            return this.a
-        },
-        caption() {
-            let sentence = ''
-
-            for (let i = 0; i < this.info.length; i++) {
-                let x = this.info[i] + ' '
-
-                sentence += x
-            }
-
-            return sentence
-        }
-    }
+    computed: {}
 })

@@ -1,21 +1,20 @@
-app9.component('reviews-display', {
+app3.component('router-display', {
     template:
     `
-    <div class="reviews-display">
-        <div class="nav-bar">
-            <div v-for="(item, index) in navBarButtons" :key="index">
-                <a :href="item.link">{{ item.name }}</a>
-            </div>
+    <div class="nav-bar">
+        <div v-for="(item, index) in navBarButtons" :key="index">
+            <a :href="item.link">{{ item.name }}</a>
         </div>
-        <p>
-            THE ART DISPLAY WEBSITE WILL BE SET UP AS THE COMMUNITY GROWS.
-            AS FOR NOW THIS PAGE WILL REMAIN UNDER CONSTRUCTION<br>
-            <img src="../../assets/images/under_construction.png">
-        </p>
+    </div>
+    <div class="router-display">
+        <div id="box-1">
+            <h1>{{ title }}</h1>
+        </div>
     </div>
     `,
     data() {
         return {
+            a: 'Our Currently Supported Extensions',
             navBarButtons: [
                 { id: 1, name: 'Home', link: '../../index.html' },
                 { id: 2, name: 'About', link: '../about/About.html' },
@@ -27,5 +26,9 @@ app9.component('reviews-display', {
         }
     },
     methods: {},
-    computed: {}
+    computed: {
+        title() {
+            return this.a
+        }
+    }
 })

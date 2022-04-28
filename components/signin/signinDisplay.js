@@ -1,7 +1,7 @@
-app9.component('reviews-display', {
+app10.component('signin-display', {
     template:
     `
-    <div class="reviews-display">
+    <div class="signin-display">
         <div class="nav-bar">
             <div v-for="(item, index) in navBarButtons" :key="index">
                 <a :href="item.link">{{ item.name }}</a>
@@ -25,7 +25,5 @@ app9.component('reviews-display', {
                 { id: 6, name: 'Sign-In', link: '../signin/SignIn.html' }
             ]
         }
-    },
-    methods: {},
-    computed: {}
+    }
 })

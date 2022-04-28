@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+* {
+    font-family: "Lacquer", cursive;
+    font-weight: bold;
+}
+
+html {
+    background-color: black;
+    color: silver;
+}
+
+.discord-display {
+    display: flexbox;
+}
+
+.discord-display #box-1 h1 {
+    font-size: 250%;
+    text-align: center;
+}
+
+.discord-display #box-1 h3 {
+    font-size: 200%;
+    text-align: center;
+}
+
+.discord-display #box-1 h3>a {
+    color: silver;
+}
+
+.discord-display #box-1 p {
+    font-size: 150%;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discord-display #box-3 table {
+    width: 95%;
+}
+
+.discord-display #box-2 table {
+    width: 80%;
+}
+
+.discord-display #box-3 table,
+.discord-display #box-2 table {
+    background-color: darkgray;
+    font-size: 130%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.discord-display #box-3 table>caption,
+.discord-display #box-2 table>caption {
+    font-size: 200%;
+}
+
+.discord-display #box-3 td {
+    text-align: center;
+    width: 10%;
+}
+
+.discord-display #box-2 td {
+    text-align: center;
+    width: 20%;
+}
+
+.discord-display #box-2 td>a {
+    color: black;
+}

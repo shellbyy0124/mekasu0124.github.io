@@ -1,106 +1,77 @@
-app7.component('about-display', {
+app2.component('about-display', {
     template:
     /*html*/
     `
     <div class="about-display">
+        <div class="nav-bar">
+            <div v-for="(item, index) in navBarButtons" :key="index">
+                <a :href="item.link">{{ item.name }}</a>
+            </div>
+        </div>
         <div id="box-1">
-            <a class="reviewLink" href="https://www.github.com/gawth3rPlatform">
-                Curious About How Gawth3r Works Now?
-            </a>
-            <h1>{{ title }}</h1>
-            <code v-html="backStory">{{ backStory }}</code>
+          <p>{{ question }}</p>
         </div>
         <div id="box-2">
-            <div class="buttler-list">
-                <h3>{{ subTitle }}</h3>
-                <ul v-for="(link, index) in bbLinks" :key="link.id">
-                    <li><a href="link.url">{{ link.name }}</a></li>
-                </ul>
-            </div>
-            <div class="gawth3r-list">
-                <h3>{{ subTitle2 }}</h3>
-                <ul v-for="(link2, index2) in gaLinks" :key="link2.id">
-                    <li><a href="link2.url">{{ link2.name }}</a></li>
-                </ul>
-            </div>
+          <p v-html="answer">{{ answer }}</p>
         </div>
     </div>
     `,
     data() {
         return {
-            a: 'Gawth3rs\' History',
+            a: 'Did you know that Gawth3r used to be ButtlerBot?',
             b: [
-                'Gawth3r started out as ButtlerBot just before christmas of 2019.',
-                'I had been curious before with computer programming and had started',
-                'with Java, but I could never figure it out. I ld notcou even figure',
-                'out a basic timer. After giving up on that project, and then a series',
-                'of events happening that wound me up in Philly with KataReborn (my friend',
-                '/my best friend), I decided I wanted to give programming another try.',
-                'after watching my friend do his programming stuff (with what I was allowed',
-                'to see), I asked him to teach me. After the struggles of picking a language,',
-                'we decided upon starting with Python. We watched some videos, did some ',
-                'exercises and I thought I knew it all and was good to go....Boy was I wrong..',
-                '..what I mean is after a few days of working some basics, and learning how to ',
-                'properly import libraries to use and such, I dove deep into the',
-                '<a href="https://discordpy.readthedocs.io/en/stable/">Discord Python Docs</a>',
-                'and started building myself my first ever robot. I was excited to! Thus begun',
-                'the adventures of ButtlerBot. You can see a list of the respositories I went ',
-                'through attempting to create my first robot. With consistently asking multiple ',
-                'questions on everything I did in various discord servers, I was driving everyone ',
-                'nuts. My friend even told me to stop and go back to fully learn the basics, and I',
-                'basically refused. I was determined to figure this stuff out. A little while goes by',
-                'of trying to create this robot and I just cannot seem to find a way that I want to',
-                'build it, or how I wanted each to lay out and respond to users so I finally scratched',
-                'ButtlerBot, took a break from programming al-together and now I am back to try and',
-                'bring you the best platform possible for any user ever anywhere. With the help of my',
-                'best friend, and a <a href="../kasmekTeamFiles/kasmek.html">KasMeks\' Programming</a> team member',
-                '(and close friend of mine as well), we plan to bring you the best content possible.',
-                'With myself, Mekasu, heading the Website Extension - KataReborn spearheading the Discord',
-                'Extension -- and I am hoping to get our other buddy on board with running, all things',
-                'member and staff appropriate. He is already our Head Administrator that runs any and',
-                'all other things member or staff related. Just need a little bit of elbow grease to',
-                'get him locked in to the title haha!'
+                'Yep! Gawth3r was once known as Buttlerbot. Buttlerbot came about',
+                'back around the year 2019 with my best friend, Chris. We were chill\'n',
+                'one day and I was watching him program and found it to be quite interesting.',
+                'I started asking questions, and what different things did plus I would name',
+                'things and bet that he couldn\'t do it. Boy..he sure could, haha! I decided at',
+                'that point that I wanted to learn how to do this. The first thing I had to',
+                'decide on was, "What is something you can bring to the table that someone else',
+                'already hasn\'t?" -Chris. I told him that I use discord and wondered if the bots',
+                'were just simply premade, and you got them from the website or were they created',
+                'by people like he and i? He replied that we could make one ourselves, so then the',
+                'adventure began. To fast-forward a bit, though, he tried to get me to understand',
+                'that mastering the basics was a very important building-block, but I refused to',
+                'listen. After numerous hours of begging for help, pissing people off, getting pissed',
+                'off, throwing my computer across the room....you get the point, I had finally',
+                'started understanding the code and how it worked, but it was just with building a',
+                'discord bot. Outside of the <a href="https://discordpy.readthedocs.io/en/stable/">discord.py</a>',
+                'library, I couldn\'t tell you, or show you, how to do anything. However, I digress.',
+                'After much struggle with trying to figure out who and what I wanted my bot to be',
+                'I decided I wanted to make him my own type of smart assistant that worked within',
+                'the discord platform. Multiple, Multiple repositories later, I switched gears and',
+                'started working ButtlerBot from being a discord assistant to being an at-home',
+                'assistant like Alexa, Google, and Amazon. It was going alright for a while, but then',
+                'my work environment became corrupt and I just couldn\'t bring myself to re-construct',
+                'the project. So then I took a break from coding, played some video games, and now we',
+                '(Chris and I) are back to bring you the best platform available to any and all members',
+                'within the discord community, and more.'
             ],
-            c: 'ButtlerBots Previous Stages:',
-            d: 'Gawth3rs Previous Stages:',
-            bbLinks: [
-                { id: 1, name: 'ButtlerBotDiscord', url: 'https://github.com/shellbyy0124/ButtlerBotDiscord' },
-                { id: 2, name: 'All_Bots_Repo', url: 'https://github.com/shellbyy0124/All_Bots_Repo' },
-                { id: 3, name: 'new_bot_code', url: 'https://github.com/shellbyy0124/new_bot_code' },
-                { id: 4, name: 'ButtlerBot', url: 'https://github.com/shellbyy0124/ButtlerBot' }
-            ],
-            gaLinks: [
-                { id: 1, name: 'Gother_discord', url: 'https://github.com/shellbyy0124/Gother_discord' },
-                { id: 2, name: 'Gother', url: 'https://github.com/shellbyy0124/Gother' },
-                { id: 3, name: 'Gawth3r-Bot', url: 'https://github.com/mekasu0124/Gawth3r-Bot' },
-                { id: 4, name: 'Gawth3r', url: 'https://github.com/mekasu0124/Gawther' },
-                { id: 5, name: 'Gawth3r-Bot-PY', url: 'https://github.com/mekasu0124/Gawth3r-Bot-PY' },
-                { id: 6, name: 'Gawth3r-Website', url: 'https://github.com/mekasu0124/Gawth3r-Website' },
-                { id: 7, name: 'gawth3rPlatform', url: 'https://github.com/mekasu0124/gawth3rPlatform' }
+            navBarButtons: [
+                { id: 1, name: 'Home', link: '../../index.html' },
+                { id: 2, name: 'About', link: './About.html' },
+                { id: 3, name: 'Extensions', link: '../router/Router.html' },
+                { id: 4, name: 'Newsletters', link: '../newsletters/Newsletters.html' },
+                { id: 5, name: 'Reviews', link: '../reviews/Reviews.html' },
+                { id: 6, name: 'Sign-In', link: '../signin/SignIn.html' }
             ]
         }
     },
     methods: {},
     computed: {
-        title() {
+        question() {
             return this.a
         },
-        backStory() {
+        answer() {
             let sentence = ''
 
             for (let i = 0; i < this.b.length; i++) {
                 let x = this.b[i] + ' '
 
-                sentence += x 
+                sentence += x
             }
 
             return sentence
-        },
-        subTitle() {
-            return this.c
-        },
-        subTitle2() {
-            return this.d
         }
     }
 })

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+* {
+    font-family: "Lacquer", cursive;
+    font-weight: bold;
+}
+
+html {
+    background-color: black;
+    color: silver;
+}
+
+.signin-display {
+    display: flexbox;
+}
+
+.signin-display p {
+    font-size: 300%;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.signin-display img {
+    width: 80%;
+}

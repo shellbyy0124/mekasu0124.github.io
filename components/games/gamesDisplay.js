@@ -1,7 +1,8 @@
-app9.component('reviews-display', {
+app6.component('game-display', {
     template:
+    /*html*/
     `
-    <div class="reviews-display">
+    <div class="game-display">
         <div class="nav-bar">
             <div v-for="(item, index) in navBarButtons" :key="index">
                 <a :href="item.link">{{ item.name }}</a>
